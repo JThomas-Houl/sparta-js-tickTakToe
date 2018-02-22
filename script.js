@@ -27,21 +27,27 @@ $(function(event){ //checks if the dom is ready can run before the html
 	console.log("DOM is ready"); 
 
 	$("td").on("click", function(event){ //click on top row
-		//console.log($(this).attr("data-num", "X")) //player click event debug print to console.log
+		//player click event debug print to console.log
 
-		console.log($(this).html("0"));
-		//topRow.css("background-color", "blue");
+		//$(this).html("x");
+		for( var i = 0; i < Turns; i++){
+			if(i % 2 == 0){2
+				$(this).html("0");
+				//console.log(0)
+			}//*else if(i % 2 !== 0);{
+				//
+				//console.log(1);
+				//$(this).html("X");
+			
 
-		//('#your-button-id').attr('data-cmd');
-
-		// for(var i = 0; i >= 9; i++){ //nedd to add the 
-		// 	console.log(	 + i);
-		// } 
-
-
+			
+			//console.log($(this).html("O"));
+		};
 	});
 
+
 });
+
 
 
 
