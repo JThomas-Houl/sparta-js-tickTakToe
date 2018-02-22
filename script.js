@@ -26,12 +26,17 @@ var bottomRow = $(".bottomRow_6_8");
 $(function(event){ //checks if the dom is ready can run before the html
 	console.log("DOM is ready"); 
 
-	playerTurn.on("click", function(event){  
-		console.log(playerTurn.html()); //player click event debug print to console.log
+	$("td").on("click", function(event){ //click on top row
+		//console.log($(this).attr("data-num", "X")) //player click event debug print to console.log
 
-		for(var i = 0; i >= 9; i++){ //nedd to add the 
-			console.log(playerTurn + i);
-		} 
+		console.log($(this).html("0"));
+		//topRow.css("background-color", "blue");
+
+		//('#your-button-id').attr('data-cmd');
+
+		// for(var i = 0; i >= 9; i++){ //nedd to add the 
+		// 	console.log(	 + i);
+		// } 
 
 
 	});
