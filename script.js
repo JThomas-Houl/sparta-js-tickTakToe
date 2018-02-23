@@ -25,6 +25,7 @@ var bottomRow = $(".bottomRow_6_8");
 
 $(function(event){ //checks if the dom is ready can run before the html
 	console.log("DOM is ready"); 
+	document.oncontextmenu = function() {return false;};
 
 	$("td").on("click", function(event){ //click on top row
 		for( var i = 0; i < Turns; i++){
@@ -36,8 +37,28 @@ $(function(event){ //checks if the dom is ready can run before the html
 		};
 	});
 
+	$("td").mousedown(function(e){ 
+    if( e.button == 2 ) { 
+      $(this).html("X"); 
+      return false; 
+    } 
+    return true; 
+  }); 
 
-	//$("#reset")
+
+
+
+	// $("td").on(contextmenu("click",function(event){
+	// 	$(this).html("X");
+	// }));
+
+	// $("td").mousedown(function(e){ 
+ //    	if( e.button == 2 ) { 
+ //      		alert('Right mouse button!'); 
+ //     		 return false; 
+ //    } 
+ //    return true; 
+ //  }); 
 
 
 });
