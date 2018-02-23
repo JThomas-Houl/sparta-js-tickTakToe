@@ -27,23 +27,17 @@ $(function(event){ //checks if the dom is ready can run before the html
 	console.log("DOM is ready"); 
 
 	$("td").on("click", function(event){ //click on top row
-		//player click event debug print to console.log
-
-		//$(this).html("x");
 		for( var i = 0; i < Turns; i++){
-			if(i % 2 == 0){2
-				$(this).html("0");
-				//console.log(0)
-			}//*else if(i % 2 !== 0);{
-				//
-				//console.log(1);
-				//$(this).html("X");
-			
 
-			
-			//console.log($(this).html("O"));
+			if(i % 2 == 0){
+				$(this).html("0"); //puts o in a square
+
+			}
 		};
 	});
+
+
+	//$("#reset")
 
 
 });
