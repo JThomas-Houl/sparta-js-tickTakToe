@@ -13,19 +13,18 @@ var playerTurn = $(".playerTurn");
 var Turns = 9;
 
 
+
 var turnX = "X";
 var turnO = "O";
 
-var topRow = $(".topRow_0_2");
-var middleRow = $(".middleRow_3_5");
-var bottomRow = $(".bottomRow_6_8");
+
 
 
 //Functions:
 
 $(function(event){ //checks if the dom is ready can run before the html
 	console.log("DOM is ready"); 
-	document.oncontextmenu = function() {return false;};
+	document.oncontextmenu = function() {return false;}; //stops the context menus from poping up 
 
 	$("td").on("click", function(event){ //click on top row
 		for( var i = 0; i < Turns; i++){
@@ -37,7 +36,7 @@ $(function(event){ //checks if the dom is ready can run before the html
 		};
 	});
 
-	$("td").mousedown(function(e){ 
+	$("td").mousedown(function(e){ //right click funtion that add x e can be used for event
     if( e.button == 2 ) { 
       $(this).html("X"); 
       return false; 
@@ -46,20 +45,11 @@ $(function(event){ //checks if the dom is ready can run before the html
   }); 
 
 
+	$("#reset").on("click", function(e){ //clears the board
+		$("td").html("");
+	});
 
-
-	// $("td").on(contextmenu("click",function(event){
-	// 	$(this).html("X");
-	// }));
-
-	// $("td").mousedown(function(e){ 
- //    	if( e.button == 2 ) { 
- //      		alert('Right mouse button!'); 
- //     		 return false; 
- //    } 
- //    return true; 
- //  }); 
-
+	
 
 });
 
