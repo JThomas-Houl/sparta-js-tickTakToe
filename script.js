@@ -24,21 +24,21 @@ var turnO = "O";
 
 $(function(event){ //checks if the dom is ready can run before the html
 	console.log("DOM is ready"); 
-	document.oncontextmenu = function() {return false;}; //stops the context menus from poping up 
+	document.oncontextmenu = function() {return false;}; //stops the context menus from poping up
+
+	
 
 	$("td").on("click", function(event){ //click on top row
-		for( var i = 0; i < Turns; i++){
 
-			if(i % 2 == 0){
-				$(this).html("0"); //puts o in a square
-
-			}
-		};
+		$(this).html("0");
+		console.log($(this).html());
+	
 	});
 
 	$("td").mousedown(function(e){ //right click funtion that add x e can be used for event
     if( e.button == 2 ) { 
       $(this).html("X"); 
+      //console.log($(this).data("num")); //reads data-num print to
       return false; 
     } 
     return true; 
@@ -47,8 +47,15 @@ $(function(event){ //checks if the dom is ready can run before the html
 
 	$("#reset").on("click", function(e){ //clears the board
 		$("td").html("");
-	});
 
+	});
+	
+	// function checkAll(){
+	// 	$("td")
+	// }
+
+
+	
 	
 
 });
